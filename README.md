@@ -13,7 +13,11 @@ Dự án này là một ứng dụng web dựa trên Flask, cung cấp các ch�
   - Ngưỡng Otsu (tự xây dựng và OpenCV).
 - **Nén Ảnh**:
   - Nén JPEG (tự xây dựng và OpenCV).
-
+## Giao diện
+![Trang chủ](image.png)
+![Hiển thị thông tin ảnh](image-1.png)
+![Chờ xử lý ảnh](image-2.png)
+![Giao diện sau khi xử lý](image-3.png)
 ## Yêu Cầu
 - Python 3.x
 - Pip (Trình quản lý gói Python)
@@ -101,6 +105,8 @@ Dự án này là một ứng dụng web dựa trên Flask, cung cấp các ch�
 | `otsu_opencv`         | Ngưỡng Otsu sử dụng OpenCV.                       |
 | `jpeg_custom_compress`| Nén JPEG với thuật toán tự xây dựng.              |
 | `jpeg_opencv_compress`| Nén JPEG sử dụng OpenCV.                          |
+
+
 
 
 
