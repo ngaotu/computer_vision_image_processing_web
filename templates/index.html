@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Processing Application</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Image Processing Application</h1>
+        <form id="imageProcessingForm" action="/process" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="file">Upload Image</label>
+                <input type="file" id="file" name="file" accept="image/*" required>
+            </div>
+
+            <!-- Hiển thị thông tin ảnh -->
+            <div class="image-info" id="imageInfo" style="display: none;">
+                <h3>Image Information</h3>
+                <p><strong>Name:</strong> <span id="imageName"></span></p>
+                <p><strong>Resolution:</strong> <span id="imageResolution"></span></p>
+            </div>
+
+            <!-- Hiển thị ảnh -->
+            <div class="image-preview" id="imagePreview" style="display: none;">
+                <h3>Image Preview</h3>
+                <img id="previewImage" src="#" alt="Preview" style="max-width: 100%; height: auto;">
+            </div>
+
+            <!-- Phần còn lại của form -->
+            <div class="form-group">
+                <h3>Choose Processing Method</h3>
+                <div class="method-options">
+                    <label>
+                        <input type="radio" name="methodType" value="equalize" required> Histogram Equalization
+                    </label>
+                    <label>
+                        <input type="radio" name="methodType" value="equalize_opencv" required> Histogram Equalization OpenCV
+                    </label>
+                    <label>
+                        <input type="radio" name="methodType" value="mean_filter"> Mean Filtering
+                    </label>
+                    <!-- <label>
+                        <input type="radio" name="methodType" value="frequency"> Frequency Filtering
+                    </label> -->
+                    <label>
+                        <input type="radio" name="methodType" value="median_filter"> Median Filtering
+                    </label>
+                    <label>
+                        <input type="radio" name="methodType" value="median_filter_opencv"> Median Filtering OpenCV
+                    </label>
+                    <label>
+                        <input type="radio" name="methodType" value="laplacian_filter"> Laplacian Filtering
+                    </label>
+                    <label>
+                        <input type="radio" name="methodType" value="laplacian_filter_opencv"> Laplacian Filtering OpenCV
+                    </label>
+                    <label>
+                        <input type="radio" name="methodType" value="dilation"> Dilation
+                    </label>
+                    <label>
+                        <input type="radio" name="methodType" value="dilation_opencv"> Dilation OpenCV
+                    </label>
+                    <label>
+                        <input type="radio" name="methodType" value="erosion"> Erosion
+                    </label>
+                    <label>
+                        <input type="radio" name="methodType" value="erosion_opencv"> Erosion OpenCV
+                    </label>
+                    <label>
+                        <input type="radio" name="methodType" value="otsu"> Otsu Thresholding
+                    </label>
+                    <label>
+                        <input type="radio" name="methodType" value="otsu_opencv"> Otsu Thresholding OpenCV
+                    </label>
+                    <label>
+                        <input type="radio" name="methodType" value="jpeg_custom_compress"> JPEG Compression
+                    </label>
+                    <label>
+                        <input type="radio" name="methodType" value="jpeg_opencv_compress"> JPEG OpenCV Compression
+                    </label>
+                </div>
+            </div>
+
+            <!-- Trường nhập kích thước kernel -->
+            <div class="form-group kernel-input" id="kernelInput">
+                <label for="kernelSize">Kernel Size (e.g., 3 for 3x3)</label>
+                <input type="number" id="kernelSize" name="kernelSize" min="1" value="3">
+                <p class="error-message" id="kernelError">Kernel size must be an odd number.</p>
+            </div>
+
+            <button type="submit">Process Image</button>
+        </form>
+    </div>
+
+    <!-- Loading Animation -->
+    <div id="loading" class="loading" style="display: none;">
+        <div class="spinner"></div>
+        <p class="loading-text">Processing...</p>
+    </div>
+
+    <!-- Dimmed Background -->
+    <div id="dimmedBackground" class="dimmed-background" style="display: none;"></div>
+
+    <script src="static/js/script.js">
+      
+    </script>
+</body>
+</html>

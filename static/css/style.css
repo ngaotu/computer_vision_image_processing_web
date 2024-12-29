@@ -1,0 +1,185 @@
+ /* General Styles */
+ body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9fafc;
+    color: #333;
+}
+
+.container {
+    max-width: 700px;
+    margin: 50px auto;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    font-size: 2em;
+    color: #4a4a4a;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #4a4a4a;
+}
+
+input[type="file"],
+input[type="number"],
+button {
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.method-options {
+    margin-top: 10px;
+}
+
+.method-options label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+input[type="radio"] {
+    margin-right: 10px;
+}
+
+.kernel-input {
+    display: none; /* Ẩn trường nhập kernel mặc định */
+}
+
+.error-message {
+    color: red;
+    display: none;
+}
+
+.image-info, .image-preview {
+    margin-bottom: 20px;
+}
+
+.image-info p {
+    margin: 5px 0;
+}
+
+.image-preview img {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #f9f9f9;
+}
+
+/* Loading Animation */
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    text-align: center;
+}
+
+.spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-top: 4px solid #007bff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+.loading-text {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #007bff;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.dimmed-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 500;
+}
+
+
+
+
+
+
+
+/* Image styles */
+img {
+    display: block;
+    max-width: 100%;
+    margin: 20px auto;
+}
+
+/* Action buttons layout */
+.actions {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+/* General button styles */
+a.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+a.button:hover {
+    background-color: #0056b3;
+}
+
+/* Back button styles */
+.back-button {
+    background-color: #28a745;
+}
+
+.back-button:hover {
+    background-color: #218838;
+}
