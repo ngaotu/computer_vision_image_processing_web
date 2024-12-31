@@ -51,7 +51,7 @@ Dự án này là một ứng dụng web dựa trên Flask, cung cấp các ch�
 
 1. **Chạy ứng dụng**:
    ```bash
-   python app.py
+   python server.py
    ```
 
 2. **Truy cập ứng dụng**:
